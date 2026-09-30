@@ -1,4 +1,5 @@
 from .board import move_or_act, nearest
+from .strawberrymello_farmer import market_orders as strawberrymello_market_orders
 
 
 FIELDS = [
@@ -22,9 +23,11 @@ def market_orders(obs):
     carrots = private["shed"].get("CARROT", 0)
     price = obs["market"]["prices"].get("CARROT", 0)
 
+    orders = []
     if carrots and (price >= MIN_SELL_PRICE or obs["day"] >= 27):
-        return [["SELL", "CARROT", carrots]]
-    return []
+        orders.append(["SELL", "CARROT", carrots])
+    orders.extend(strawberrymello_market_orders(obs))
+    return orders
 
 
 def action(obs):
