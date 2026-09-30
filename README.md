@@ -2,7 +2,8 @@
 
 Агент для среды соревнования Kaggle `kaggriculture`. Он выращивает морковь,
 собирает урожай, продаёт его при выгодной цене и нанимает работников для
-удаления сорняков.
+удаления сорняков, ягодных культур и ухода за животными. В Kaggriculture яйца
+дают гуси (`GOOSE`), а не куры.
 
 ## Требования
 
@@ -59,6 +60,10 @@ main.py                         Точка входа агента для Kaggle
 run_local.py                    Локальная партия: наш агент против starter
 src/kuggriculture/agent.py      Сборка действий агента
 src/kuggriculture/carrot_farmer.py  Логика выращивания и торговли морковью
+src/kuggriculture/strawberrymello_farmer.py  Рука для клубники и арбузов
+src/kuggriculture/chickenfarmer.py  Рука для гусей и яиц
+src/kuggriculture/cowboy.py        Рука для коров и молока
+src/kuggriculture/livestock.py     Животные, ферма и выращивание пшеницы на корм
 src/kuggriculture/weed_keeper.py    Логика работников и удаления сорняков
 src/kuggriculture/board.py      Перемещение и поиск ближайшей клетки
 ```
