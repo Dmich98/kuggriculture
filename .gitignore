@@ -9,4 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
+game.html
+*.tar.gz
 *.fish

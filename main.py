@@ -1,1 +1,1 @@
-from kuggriculture.agent import agent
+from kuggriculture.agent import agent  # noqa: F401

@@ -2,7 +2,6 @@ from pathlib import Path
 
 from kaggle_environments import make
 
-
 env = make("kaggriculture", configuration={"episodeSteps": 720}, debug=True)
 env.run(["main.py", "starter"])
 
